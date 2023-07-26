@@ -34,6 +34,8 @@
         </div>
     </section>
 
+    <section id="cars" class="car-listings"></section>
+
     <section class="about">
         <!-- About section with information about your dealership -->
         <div class="container">
@@ -41,85 +43,118 @@
                 <div class="col-lg-6">
                     <h2>About Us</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, quam quis rhoncus tincidunt, nulla ipsum sagittis odio, eu malesuada nisi orci nec lectus.
+                      TOFY dealership we are selling luxury cars with exceptional price
                     </p>
                 </div>
             </div>
         </div>
-    </section>  
-    
+    </section>
 
-<!-- Car Listings -->
-<section class="car-listings">
-    <div class="container">
-      <h2>Featured Cars</h2>
-      <div class="row">
-        <!-- Car Listing 1 -->
-        <div class="col-4">
-          <div class="car-item">
-            <img src="images/car1.jpg" alt="Car 1" />
-            <h4>Car 1 Model</h4>
-            <p>Price: $35,000</p>
-            <!-- Additional car details or buttons can go here -->
-          </div>
+    <!-- Car Listings -->
+    <section class="car-listings">
+        <div class="container">
+            <h2>Featured Cars</h2>
+            <div class="row">
+                <!-- Car Listing 1 -->
+                <div class="col-4">
+                    <div class="car-item">
+                        <img src="assets/718.jpg" alt="718" />
+                        <h4>Porshce 718</h4>
+                        <p>Price: $135,000</p>
+                        <!-- Additional car details or buttons can go here -->
+                    </div>
+                    <div class="buttons">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="add-to-cart-btn" data-name="Porshce 718" data-price="135000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Car Listing 2 -->
+                <div class="col-4">
+                    <div class="car-item">
+                        <img src="./assets/911 turbo s.jpg" alt="911" />
+                        <h4>Porsce 911 turbo s</h4>
+                        <p>Price: $128,500</p>
+                        <!-- Additional car details or buttons can go here -->
+                    </div>
+                    <div class="buttons">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="add-to-cart-btn" data-name="Porsce 911 turbo s" data-price="128500">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Car Listing 3 -->
+                <div class="col-4">
+                    <div class="car-item">
+                        <img src="./assets/bmwx7.jpg" alt="X7" />
+                        <h4>BMW X7</h4>
+                        <p>Price: $242,000</p>
+                        <!-- Additional car details or buttons can go here -->
+                    </div>
+                    <div class="buttons">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="add-to-cart-btn" data-name="BMW X7" data-price="242000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Add more car listings here -->
+                <!-- Car Listing 4 -->
+                <div class="col-4">
+                    <div class="car-item">
+                        <img src="./assets/cayman 718.jpg" alt="Cayman" />
+                        <h4>Porsce Cayman</h4>
+                        <p>Price: $131,800</p>
+                        <!-- Additional car details or buttons can go here -->
+                    </div>
+                    <div class="buttons">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="add-to-cart-btn" data-name="Porsche Cayman" data-price="131800">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Car Listing 5 -->
+                <div class="col-4">
+                    <div class="car-item">
+                        <img src="./assets/g63.jpg" alt="G63" />
+                        <h4>Mercedes AMG G63</h4>
+                        <p>Price: $438,500</p>
+                        <!-- Additional car details or buttons can go here -->
+                    </div>
+                    <div class="buttons">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="add-to-cart-btn" data-name="Mercedes AMG G63" data-price="438500">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Car Listing 6 -->
+                <div class="col-4">
+                    <div class="car-item">
+                        <img src="./assets/gla.jpg" alt="GLA" />
+                        <h4>Mercedes GLA</h4>
+                        <p>Price: $229,900</p>
+                        <!-- Additional car details or buttons can go here -->
+                    </div>
+                    <div class="buttons">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="add-to-cart-btn" data-name="Mercedes GLA" data-price="229900">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <!-- Car Listing 2 -->
-        <div class="col-4">
-          <div class="car-item">
-            <img src="images/car2.jpg" alt="Car 2" />
-            <h4>Car 2 Model</h4>
-            <p>Price: $28,500</p>
-            <!-- Additional car details or buttons can go here -->
-          </div>
+    </section>
+
+    <!-- Rest of your HTML content goes here, such as Contact Form, Footer, etc. -->
+
+    <!-- Shopping Cart -->
+    <section class="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <ul class="cart-items" id="cart-items">
+                <!-- The cart items will be added dynamically here -->
+            </ul>
+            <p class="total-price" id="total-price">Total Price: $0.00</p>
         </div>
-  
-        <!-- Car Listing 3 -->
-        <div class="col-4">
-          <div class="car-item">
-            <img src="images/car3.jpg" alt="Car 3" />
-            <h4>Car 3 Model</h4>
-            <p>Price: $42,000</p>
-            <!-- Additional car details or buttons can go here -->
-          </div>
-        </div>
-  
-        <!-- Add more car listings here -->
-        <!-- Car Listing 4 -->
-        <div class="col-4">
-          <div class="car-item">
-            <img src="images/car4.jpg" alt="Car 4" />
-            <h4>Car 4 Model</h4>
-            <p>Price: $31,800</p>
-            <!-- Additional car details or buttons can go here -->
-          </div>
-        </div>
-  
-        <!-- Car Listing 5 -->
-        <div class="col-4">
-          <div class="car-item">
-            <img src="images/car5.jpg" alt="Car 5" />
-            <h4>Car 5 Model</h4>
-            <p>Price: $38,500</p>
-            <!-- Additional car details or buttons can go here -->
-          </div>
-        </div>
-  
-        <!-- Car Listing 6 -->
-        <div class="col-4">
-          <div class="car-item">
-            <img src="images/car6.jpg" alt="Car 6" />
-            <h4>Car 6 Model</h4>
-            <p>Price: $29,900</p>
-            <!-- Additional car details or buttons can go here -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Rest of your HTML content goes here, such as Contact Form, Footer, etc. -->
-  
+    </section>
 
     <section class="contact">
         <!-- Contact section with a contact form and contact details -->
@@ -167,16 +202,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Your custom JavaScript -->
-    <!-- Add this script at the end of your HTML body section -->
-     <script>
-    // Navigation Menu Toggle
-    const MenuItems = document.getElementById("MenuItems");
-    const menuIcon = document.querySelector(".menu-icon");
-  
-    menuIcon.addEventListener("click", () => {
-      MenuItems.classList.toggle("show");
-    });
-
+    <!-- custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
+

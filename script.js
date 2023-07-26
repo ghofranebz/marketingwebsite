@@ -1,64 +1,77 @@
-// script.js
+// Add your custom JavaScript here
 
 // Navigation Menu Toggle
-const MenuItems = document.getElementById("MenuItems");
+const MenuItems = document.querySelector(".navbar ul");
 const menuIcon = document.querySelector(".menu-icon");
 
 menuIcon.addEventListener("click", () => {
   MenuItems.classList.toggle("show");
 });
 
-// Form Validation
-const contactForm = document.getElementById("contact-form");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
-const formFeedback = document.getElementById("form-feedback");
-
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  if (!validateForm()) {
-    formFeedback.innerHTML = "Please fill out all fields correctly.";
-    formFeedback.style.color = "#ff4145";
-  } else {
-    formFeedback.innerHTML = "Message sent successfully!";
-    formFeedback.style.color = "#4caf50";
-
-    // You can use AJAX or other methods here to send the form data to your server.
-    // For this example, we are just displaying a success message.
-  }
-});
-
-function validateForm() {
-  const nameValue = nameInput.value.trim();
-  const emailValue = emailInput.value.trim();
-  const messageValue = messageInput.value.trim();
-
-  // Regular expressions for email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  let valid = true;
-
-  if (nameValue === "" || emailValue === "" || messageValue === "") {
-    valid = false;
-  }
-
-  if (!emailRegex.test(emailValue)) {
-    valid = false;
-  }
-
-  return valid;
-}
-// Add smooth scroll to navigation links
-const navLinks = document.querySelectorAll(".navbar a");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute("href"));
-    target.scrollIntoView({
-      behavior: "smooth",
+    
+    const target = document.querySelector(this.getAttribute("href"));
+    const headerOffset = 100;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: "smooth"
     });
   });
 });
+// Like buttons functionality
+const likeButtons = document.querySelectorAll(".like-btn");
+
+likeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("liked");
+  });
+});
+
+// CART FONCTION
+const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+const cartItems = document.getElementById("cart-items");
+const totalPrice = document.getElementById("total-price");
+
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    renderCartItems();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    renderCartItems();
+}
+
+function renderCartItems() {
+    cartItems.innerHTML = "";
+    let total = 0;
+    cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.className = "cart-item";
+        li.innerHTML = `
+            <p>${item.name} - $${item.price.toFixed(2)}</p>
+            <button class="remove-from-cart-btn" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartItems.appendChild(li);
+        total += item.price;
+    });
+    totalPrice.textContent = `Total Price: $${total.toFixed(2)}`;
+}
+
+addToCartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const name = button.dataset.name;
+        const price = parseFloat(button.dataset.price);
+        addToCart(name, price);
+    });
+});
+
+

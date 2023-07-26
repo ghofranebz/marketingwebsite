@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Dealership | Your Ultimate Destination for Cars</title>
+    <title> TOFY Car Dealership | Your Ultimate Destination for Cars</title>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome CSS -->
@@ -17,6 +18,7 @@
         <div class="navbar">
             <!-- Navigation links go here -->
             <img src="images/menu.png" alt="" class="menu-icon" />
+            <img src="./assets/logo1.png" alt="Logo" class="logo">
         </div>
           
     </header>
@@ -28,7 +30,8 @@
                 <div class="col-lg-6">
                     <h1>Find Your Dream Car</h1>
                     <p>Explore a wide range of premium cars and choose your perfect match.</p>
-                    <a href="#cars" class="btn btn-primary">View Cars</a>
+                    <a href="#cars-section" class="btn btn-primary">View Cars</a>
+                    <a href="signup.html" class="btn btn-primary" target="_blank">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -43,7 +46,7 @@
                 <div class="col-lg-6">
                     <h2>About Us</h2>
                     <p>
-                      TOFY dealership we are selling luxury cars with exceptional price
+                      TOFY dealership we are selling luxury cars with exceptional price "We are selling to willing buyers at the current fair market"
                     </p>
                 </div>
             </div>
@@ -51,6 +54,7 @@
     </section>
 
     <!-- Car Listings -->
+  <section id="cars-section" class="car-listings">
     <section class="car-listings">
         <div class="container">
             <h2>Featured Cars</h2>
@@ -96,29 +100,25 @@
                         <button class="add-to-cart-btn" data-name="BMW X7" data-price="242000">Add to Cart</button>
                     </div>
                 </div>
-
-                <!-- Add more car listings here -->
                 <!-- Car Listing 4 -->
                 <div class="col-4">
                     <div class="car-item">
-                        <img src="./assets/cayman 718.jpg" alt="Cayman" />
+                        <img src="./assets/caymans.jpg" alt="Cayman" />
                         <h4>Porsce Cayman</h4>
                         <p>Price: $131,800</p>
-                        <!-- Additional car details or buttons can go here -->
+                        <!--buttons-->
                     </div>
                     <div class="buttons">
                         <button class="like-btn"><i class="fas fa-heart"></i></button>
                         <button class="add-to-cart-btn" data-name="Porsche Cayman" data-price="131800">Add to Cart</button>
                     </div>
-                </div>
-
+                </div> 
                 <!-- Car Listing 5 -->
                 <div class="col-4">
                     <div class="car-item">
                         <img src="./assets/g63.jpg" alt="G63" />
                         <h4>Mercedes AMG G63</h4>
                         <p>Price: $438,500</p>
-                        <!-- Additional car details or buttons can go here -->
                     </div>
                     <div class="buttons">
                         <button class="like-btn"><i class="fas fa-heart"></i></button>
@@ -132,7 +132,6 @@
                         <img src="./assets/gla.jpg" alt="GLA" />
                         <h4>Mercedes GLA</h4>
                         <p>Price: $229,900</p>
-                        <!-- Additional car details or buttons can go here -->
                     </div>
                     <div class="buttons">
                         <button class="like-btn"><i class="fas fa-heart"></i></button>
@@ -142,15 +141,14 @@
             </div>
         </div>
     </section>
-
-    <!-- Rest of your HTML content goes here, such as Contact Form, Footer, etc. -->
+  </section>
 
     <!-- Shopping Cart -->
     <section class="cart">
         <div class="container">
             <h2>Your Cart</h2>
             <ul class="cart-items" id="cart-items">
-                <!-- The cart items will be added dynamically here -->
+                <!-- The cart items will be added dynamically -->
             </ul>
             <p class="total-price" id="total-price">Total Price: $0.00</p>
         </div>
@@ -184,7 +182,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <p>&copy; 2023 Your Car Dealership. All rights reserved.</p>
+                    <p>&copy; 2023 Your Car Dealership BY GHOFRANE BENZID. All rights reserved.</p>
                 </div>
                 <div class="col-lg-6">
                     <div class="social-links">

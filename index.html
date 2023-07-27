@@ -20,7 +20,6 @@
             <img src="images/menu.png" alt="" class="menu-icon" />
             <img src="./assets/logo1.png" alt="Logo" class="logo">
         </div>
-          
     </header>
 
     <section class="hero">
@@ -152,15 +151,15 @@
             </ul>
             <p class="total-price" id="total-price">Total Price: $0.00</p>
         </div>
-    </section>
-
+    </section> 
+    
     <section class="contact">
         <!-- Contact section with a contact form and contact details -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <h2>Contact Us</h2>
-                    <form action="contact.php" method="POST">
+                    <form id="contact-form" action="contact.php" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
@@ -172,6 +171,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+                    <div class="response-message" id="response-message"></div>
                 </div>
             </div>
         </div>

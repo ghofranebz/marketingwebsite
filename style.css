@@ -158,3 +158,21 @@ footer {
 .total-price {
   font-weight: bold;
 }
+
+/* Response message styles */
+.response-message {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.response-message.success {
+  color: green;
+  background-color: lightgreen;
+}
+
+.response-message.error {
+  color: red;
+  background-color: #ffcdd2;
+}
+

@@ -1,5 +1,3 @@
-// Add your custom JavaScript here
-
 // Navigation Menu Toggle
 const MenuItems = document.querySelector(".navbar ul");
 const menuIcon = document.querySelector(".menu-icon");
@@ -73,5 +71,30 @@ addToCartButtons.forEach((button) => {
         addToCart(name, price);
     });
 });
+
+// Function to display the response message
+function showMessage(message, isSuccess) {
+  const responseMessage = document.getElementById("response-message");
+  responseMessage.textContent = message;
+  responseMessage.classList.remove(isSuccess ? "error" : "success");
+  responseMessage.classList.add(isSuccess ? "success" : "error");
+}
+
+// Function to handle form submission
+function handleSubmit(event) {
+  event.preventDefault();
+
+  // Simulate form submission delay (optional)
+  setTimeout(() => {
+    // Show "Message sent successfully" response
+    showMessage("Message sent successfully!", true);
+
+    // Clear the form after successful submission (optional)
+    event.target.reset();
+  }, 1000);
+}
+
+const contactForm = document.getElementById("contact-form");
+contactForm.addEventListener("submit", handleSubmit);
 
 

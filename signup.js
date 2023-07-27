@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // the form element
+    //the form element
     const signUpForm = document.querySelector("form");
   
-    // Handle form submission
+    //Handle form submission
     signUpForm.addEventListener("submit", function (event) {
       event.preventDefault();
       const formData = new FormData(signUpForm);
